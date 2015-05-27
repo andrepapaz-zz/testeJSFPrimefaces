@@ -1,0 +1,8 @@
+<ui:composition template="/WEB-INF/templates/template.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:define name="conteudo">
+        <ui:include src="listaCursos.xhtml">
+            <ui:param name="cursos" value="#{cursoBean.todosCursos}"/>
+        </ui:include>
+    </ui:define>
+</ui:composition>

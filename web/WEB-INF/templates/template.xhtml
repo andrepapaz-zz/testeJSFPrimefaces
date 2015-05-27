@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+        >
+
+<h:head>
+    <title>
+        Teste JSF e Primefaces
+    </title>
+</h:head>
+<h:body>
+    <h:outputStylesheet name="cursos.css" library="css"/>
+    <div id="header"><img id="top" src="imagens/logo.jpg" alt="logo"/>
+    <hr />
+    </div>
+
+    <div id="conteudo">
+        <ui:insert name="conteudo">
+            Espaço para o conteúdo da tela
+        </ui:insert>
+    </div>
+    <div id="footer" style="text-align: center">
+        <hr />
+        &copy; 2015 Teste JSF e Primefaces. Todos os direitos reservados.
+    </div>
+</h:body>
+
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+        >
+
+<h:head>
+    <title>
+        Novo Curso
+    </title>
+</h:head>
+
+<h:body>
+    <h:outputStylesheet name="cursos.css" library="css" />
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Nome: " for="fnome" />
+            <h:inputText value="#{cursoBean.curso.nome}" id="fnome" />
+
+            <h:outputLabel value="Sigla: " for="fsigla" />
+            <h:inputText value="#{cursoBean.curso.sigla}" id="fsigla" />
+
+            <h:commandButton value="Adicionar" action="#{cursoBean.adicionaCurso}" />
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>
