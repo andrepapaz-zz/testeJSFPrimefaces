@@ -1,0 +1,33 @@
+<ui:composition template="/WEB-INF/templates/template.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:define name="conteudo">
+        <h:body>
+            <h:form>
+                <h1>Cadastro de Funcionario</h1>
+                <h:panelGrid columns="3">
+                    <h:outputLabel value="Salário: R$ " for="campo-salario"/>
+                    <h:inputText id="campo-salario" value="#{funcionarioBean.funcionario.salario}">
+                        <f:convertNumber locale="pt_BR"/>
+                    </h:inputText>
+                    <h:message for="campo-salario"/>
+
+                    <h:outputLabel value="Código: " for="campo-codigo"/>
+                    <h:inputText id="campo-codigo" value="#{funcionarioBean.funcionario.codigo}"/>
+                    <h:message for="campo-codigo"/>
+
+                    <h:outputLabel value="Data: (dd/MM/yyyy)" for="campo-aniversario"/>
+                    <h:inputText id="campo-aniversario" value="#{funcionarioBean.funcionario.aniversario}">
+                        <f:convertDateTime pattern="dd/MM/yyyy"/>
+                    </h:inputText>
+                    <h:message for="campo-aniversario"/>
+
+                    <h:commandButton value="Cadastrar" action="#{funcionarioBean.cadastrar}"/>
+
+                </h:panelGrid>
+            </h:form>
+        </h:body>
+    </ui:define>
+
+</ui:composition>
